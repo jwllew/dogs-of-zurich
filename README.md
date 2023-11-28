@@ -17,6 +17,8 @@ Inspiration taken from work by [Thomas Massie](https://public.tableau.com/app/pr
 
 
 ---
+### About the visualisations
+
 The first visualisation is an interactive sunburst plot, created with Plotly and deployed within Dash. A user can adjust the range of displayed data and navigate through the hierarchy. Tooltips display further information.
 
 image
@@ -28,17 +30,17 @@ image
 
 
 ---
-### Running the visualisations
+### Usage
 The two visualisations are stored within separate folders.
 
-#### Running visualisation 1
+#### Running vis 1
 ```
 cd ./vis1
 pip install -r requirements.txt
 python -m vis1_dash
 ```
 
-#### Running visualisation 2
+#### Running vis 2
 ```
 cd ./vis2
 python -m http.server
