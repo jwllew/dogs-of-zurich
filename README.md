@@ -14,23 +14,31 @@ Dataset is available at [Open Data Zurich](https://data.stadt-zuerich.ch/).
 
  
 Inspiration taken from work by <a href="https://public.tableau.com/app/profile/thomas.massie">Thomas Massie </a> as featured at <a href="https://theodi.org/article/the-open-data-olympics-seven-weird-and-wonderful-open-datasets/">ODI</a>.
+---
 
+
+The first visualisation is an interactive sunburst plot, created with Plotly and deployed within Dash. A user can adjust the range of displayed data and navigate through the hierarchy. Tooltips display further information.
+
+image
+
+The second visualisation is a d3 bubble plot displaying various categories of dog names and their frequencies.
+It loads the d3 library from a script linked in the HTML head, and displays data from a JSON file contained within the /static directory. 
+
+image
+
+
+---
 ### Running the visualisations
-The first visualisation is a Plotly chart deployed within Dash.
-#### Usage
+The two visualisations are stored within separate folders.
 
+#### Running visualisation 1
 ```
-cd ./vis1 
+cd ./vis1
 pip install -r requirements.txt
 python -m vis1_dash
 ```
 
-
-The second visualisation is a d3 plot.
-It loads the d3 library from a script linked in the HTML head, and displays data from a JSON file contained within the /static directory. 
-
-#### Usage
----
+#### Running visualisation 2
 ```
 cd ./vis2
 python -m http.server
