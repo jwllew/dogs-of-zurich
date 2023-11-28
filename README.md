@@ -13,7 +13,7 @@ Dataset is available at [Open Data Zurich](https://data.stadt-zuerich.ch/).
 [Other data including breeds, colours, owner details](https://data.stadt-zuerich.ch/dataset/sid_stapo_hundebestand_od1001)
 
  
-Inspiration taken from work by <a href="https://public.tableau.com/app/profile/thomas.massie">Thomas Massie </a> as featured at <a href="https://theodi.org/article/the-open-data-olympics-seven-weird-and-wonderful-open-datasets/">ODI</a>.
+Inspiration taken from work by [Thomas Massie](https://public.tableau.com/app/profile/thomas.massie) as featured at [ODI](https://theodi.org/article/the-open-data-olympics-seven-weird-and-wonderful-open-datasets/).
 ---
 
 
