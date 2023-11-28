@@ -19,10 +19,11 @@ Inspiration taken from work by <a href="https://public.tableau.com/app/profile/t
 The first visualisation is a Plotly chart deployed within Dash.
 #### Usage
 ---
-
+```
 cd ./vis1 
 pip install -r requirements.txt
 python -m vis1_dash
+```
 
 ---
 The second visualisation is a d3 plot.
