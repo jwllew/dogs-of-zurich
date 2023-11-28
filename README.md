@@ -9,9 +9,10 @@ It soon became apparent to me that maybe the physical details and name of every 
 
   
 Dataset is available at [Open Data Zurich](https://data.stadt-zuerich.ch/). 
+
 [Names of dogs](https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen_od1002)
+
 [Other data including breeds, colours, owner details](https://data.stadt-zuerich.ch/dataset/sid_stapo_hundebestand_od1001)
 
  
-Dataset idea taken from work by <a href="https://public.tableau.com/app/profile/thomas.massie">Thomas Massie </a> as featured at <a href="https://theodi.org/article/the-open-data-olympics-seven-weird-and-wonderful-open-datasets/">ODI</a>. Code adapted from <a href="https://gist.github.com/mbostock/4063530">Mike Bostock</a>.</p>
-        </div>
+Inspiration taken from work by <a href="https://public.tableau.com/app/profile/thomas.massie">Thomas Massie </a> as featured at <a href="https://theodi.org/article/the-open-data-olympics-seven-weird-and-wonderful-open-datasets/">ODI</a>.
