@@ -18,21 +18,21 @@ Inspiration taken from work by <a href="https://public.tableau.com/app/profile/t
 ### Running the visualisations
 The first visualisation is a Plotly chart deployed within Dash.
 #### Usage
----
+
 ```
 cd ./vis1 
 pip install -r requirements.txt
 python -m vis1_dash
 ```
 
----
+
 The second visualisation is a d3 plot.
 It loads the d3 library from a script linked in the HTML head, and displays data from a JSON file contained within the /static directory. 
 
 #### Usage
 ---
-
+```
 cd ./vis2
 python -m http.server
-
+```
 ---
