@@ -18,7 +18,7 @@ Inspiration taken from work by [Thomas Massie](https://public.tableau.com/app/pr
 
 
 ### About the visualisations
-
+---
 The first visualisation is an interactive sunburst plot, created with Plotly and deployed within Dash. A user can adjust the range of displayed data and navigate through the hierarchy. Tooltips display further information.
 
 image
@@ -29,8 +29,9 @@ It loads the d3 library from a script linked in the HTML head, and displays data
 image
 
 
----
+
 ### Usage
+---
 The two visualisations are stored within separate folders.
 
 #### Running vis 1
