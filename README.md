@@ -14,9 +14,9 @@ Dataset is available at [Open Data Zurich](https://data.stadt-zuerich.ch/).
 
  
 Inspiration taken from work by [Thomas Massie](https://public.tableau.com/app/profile/thomas.massie) as featured at [ODI](https://theodi.org/article/the-open-data-olympics-seven-weird-and-wonderful-open-datasets/).
+
+
 ---
-
-
 The first visualisation is an interactive sunburst plot, created with Plotly and deployed within Dash. A user can adjust the range of displayed data and navigate through the hierarchy. Tooltips display further information.
 
 image
