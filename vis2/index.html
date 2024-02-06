@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vis 2 - names</title>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+body {
+font-family: 'Ubuntu', sans-serif;  
+}
+
+svg {
+margin: 1vh 5vw 2vh 5vw;
+align-self: center;
+border-radius: 100px;
+}
+
+.node {
+cursor: pointer;
+}
+
+.node:hover {
+stroke: white;
+stroke-width: 1.5px;
+}
+
+.node--leaf {
+fill: #c6e9fb;
+}
+
+.label {
+fill: #095c86;
+font: 16px 'Ubuntu', Arial, sans-serif;
+text-anchor: middle;
+/* text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff; */
+}
+
+h2 {
+font-family: 'Ubuntu', sans-serif;  font-size: 36pt;
+}
+
+
+.node--root {
+/* pointer-events: none; */
+}
+
+#cont {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 80vw;
+height: 120vh;
+margin: 0 10vw 5vh 10vw;
+}
+
+</style>
+<body>
+    <div id="cont">
+        <h2 id="info">Pets as jewellery : dog names in Zürich</h2>
+        <svg width="900" height="900"></svg>
+        <div id="text">
+            <h3>Zürich is a city of brands and wealth. This is reflected in the names some owners have chosen for their pets.</h2>
+            <p><b>Data shown:</b><br>
+                the 50 most popular dog names for 2022, with counts
+                <br>
+                selected lists of:
+                <ul>
+                    <li>'designer' dogs named after 'luxury' items</li>
+                    <li>'long' dogs named at the 30 character limit</li>
+                    <li>'unique' dogs with short names, that only appear once</li>
+                </ul>
+            </p>
+           <p>Data shown for <b>2022</b> obtained from <a href="https://data.stadt-zuerich.ch/dataset/sid_stapo_hundenamen_od1002">Open Data Zurich</a> via <a href="https://data.europa.eu/data/datasets/d3c778c4-3da8-4bd7-996c-1f5126cfaedc-stadt-zurich~~1?locale=en ">Eurostat</a>.<br>
+            Dataset idea taken from work by <a href="https://public.tableau.com/app/profile/thomas.massie">Thomas Massie </a> as featured at <a href="https://theodi.org/article/the-open-data-olympics-seven-weird-and-wonderful-open-datasets/">ODI</a>. Code adapted from <a href="https://gist.github.com/mbostock/4063530">Mike Bostock</a>.</p>
+        </div>
+    </div>
+</body>    
+<script>
+    var svg = d3.select("svg"),
+        margin = 20,
+        diameter = +svg.attr("width"),
+        g = svg
+        .append("g")
+        .attr("transform",
+            "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+    
+            var color = d3.scaleLinear()
+        .domain([-1, 5])
+        .range(["hsl(206, 59%, 56%)", "hsl(198, 84%, 89%)"])
+        .interpolate(d3.interpolateHcl);
+
+    var pack = d3.pack()
+        .size([diameter - margin, diameter - margin])
+        .padding(2);
+
+    d3.json("static/json/2022flare.json", function(error, root) {
+        if (error) throw error;
+        root = d3.hierarchy(root)
+            .sum(function(d) { 
+                return d.value; 
+            })
+            .sort(function(a, b) {
+                return b.value - a.value;
+            });
+
+        var focus = root,
+        nodes = pack(root).descendants(),
+        view;
+
+        var circle = g.selectAll("circle")
+            .data(nodes)
+            .enter()
+            .append("circle")
+            .attr("class", function(d) { 
+                return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; 
+            })
+            .style("fill", function(d) {
+                return d.children ? color(d.depth) : null;
+            })
+            .on("click", function(d) {
+                if (focus !== d) zoom(d), d3.event.stopPropagation(); 
+            });
+
+        var text = g.selectAll("text")
+            .data(nodes)
+            .enter()
+            .append("text")
+            .attr("class", "label")
+            .style("fill-opacity", function(d) {
+                return d.parent === root ? 1 : 0;
+            })
+            .style("display", function(d) {
+                return d.parent === root ? "inline" : "none";
+            })
+            .text(function(d) {
+                if (d.depth === 0) {
+                    return "";
+                } else if (d.depth == 2) {
+                    return d.data.name + " (" + d.value + ")";
+                } else {
+                    return d.data.name;
+                }  
+            })
+
+        var node = g.selectAll("circle,text");
+
+        svg.style("background", color(-1))
+            .on("click", function() {
+                zoom(root);
+            });
+            zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+        function zoom(d) {
+            var focus0 = focus; focus = d;
+            var transition = d3.transition()
+                .duration(d3.event.altKey ? 7500 : 750)
+                .tween("zoom", function(d) {
+                    var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+                        return function(t) { 
+                            zoomTo(i(t));
+                        };
+                });
+
+            transition.selectAll(".label")
+                .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
+                .style("fill-opacity", function(d) { 
+                    if (d.depth === 1) {
+                        return d.parent === focus ? 1: 0;
+                    }
+                    else {
+                        return d.parent === focus ? 1: 1;
+                    }
+                })
+
+                .style("display", function(d) {
+                    return d.parent === focus || d === focus ? "inline" : "none";
+                });
+
+            transition.selectAll("circle")
+                .style("opacity", function(d) {
+                    return d.parent === focus || d === focus ? 1:1;
+                })
+                .style("stroke-width", function(d) {
+                    return d.parent === focus || d === focus ? 2 : 1;
+                });
+        }       
+
+        function zoomTo(v) {
+            var k = diameter / v[2]; view = v;
+            node.attr("transform", function(d) {
+                return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")";
+            });
+            circle.attr("r", function(d) {
+                return d.r * k;
+            });
+            text.attr("transform", function(d) {
+                var x = (d.x - v[0]) * k,
+                y = (d.y - v[1]) * k,
+                angle = 0;
+                if(d.depth ===3 ){
+                    angle = 10;
+                }
+                return "translate(" + x + "," + y + ")rotate(" + angle + ")";
+            })
+        }
+    }); 
+</script>
+</html>

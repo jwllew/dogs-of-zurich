@@ -1,0 +1,27 @@
+{
+    "name" : "dogs of Zurich 2022",
+            "children":[
+                {
+                    "name" : "Top Dogs",
+                    "children" :[{"name": "Coco", "value": 23}, {"name": "Luna", "value": 18}, {"name": "Max", "value": 17}, {"name": "Rocky", "value": 16}, {"name": "Simba", "value": 16}, {"name": "Daisy", "value": 15}, {"name": "Lucky", "value": 15}, {"name": "Charly", "value": 15}, {"name": "Lilly", "value": 14}, {"name": "Leo", "value": 14}, {"name": "Stella", "value": 14}, {"name": "Mimi", "value": 13}, {"name": "Balu", "value": 13}, {"name": "Kira", "value": 13}, {"name": "Snoopy", "value": 13}, {"name": "Lou", "value": 13}, {"name": "Charlie", "value": 13}, {"name": "Bella", "value": 13}, {"name": "Emma", "value": 13}, {"name": "Jacky", "value": 13}, {"name": "Sky", "value": 12}, {"name": "Nala", "value": 12}, {"name": "Gina", "value": 12}, {"name": "Sunny", "value": 12}, {"name": "Mia", "value": 12}, {"name": "Buddy", "value": 12}, {"name": "Milo", "value": 12}, {"name": "Momo", "value": 11}, {"name": "Neo", "value": 11}, {"name": "Molly", "value": 11}, {"name": "Ruby", "value": 11}, {"name": "Lara", "value": 11}, {"name": "Jack", "value": 11}, {"name": "Bobby", "value": 11}, {"name": "Nero", "value": 10}, {"name": "Aiko", "value": 10}, {"name": "Amy", "value": 10}, {"name": "Lucy", "value": 10}, {"name": "Lola", "value": 10}, {"name": "Joy", "value": 10}, {"name": "Chico", "value": 10}, {"name": "Teddy", "value": 10}, {"name": "Cookie", "value": 10}, {"name": "Bailey", "value": 9}, {"name": "Mila", "value": 9}, {"name": "Marley", "value": 9}, {"name": "Tyson", "value": 9}, {"name": "Leon", "value": 9}, {"name": "Benji", "value": 9}, {"name": "Elvis", "value": 9}]
+                },
+                {
+                    "name" : "Designer Dogs",
+                    "children" : [{"name": "Coco", "value": 25}, {"name": "Stella", "value": 14}, {"name": "Chanel", "value": 9}, {"name": "Gucci", "value": 8}, {"name": "Hugo", "value": 8}, {"name": "Diva", "value": 6}, {"name": "Tiffany", "value": 6}, {"name": "Coco Chanel", "value": 4}, {"name": "Levi", "value": 4}, {"name": "Armani", "value": 3}, {"name": "Dior", "value": 3}, {"name": "Chanelle", "value": 2}, {"name": "Moet", "value": 2}, {"name": "Lolita", "value": 2}, {"name": "Zara", "value": 2}, {"name": "Tommy", "value": 2}, {"name": "Pandora", "value": 1}, {"name": "Hugo Sherlock", "value": 1}, {"name": "II Coco", "value": 1}, {"name": "Pablo Hermes", "value": 1}, {"name": "Molly (HETY of Blue Diamond)", "value": 1}, {"name": "June Stella", "value": 1}, {"name": "Louis Vuitton", "value": 1}, {"name": "Jackomo of Blue Diamond", "value": 1}, {"name": "Lola Stella", "value": 1}, {"name": "Joker Coconut The Third", "value": 1}, {"name": "Pandora-Ora", "value": 1}, {"name": "Joy Stella", "value": 1}, {"name": "Marco Polo (Harry)", "value": 1}, {"name": "Ralph", "value": 1}]
+                },
+                {
+                    "name" : "More categories",
+                    "children" : [
+                        {
+                            "name" : "Longest Dogs",
+                            "children" : [{"name": "Alles Liebe Ava mein Rheingold", "value": 1}, {"name": "Lenny (Adelante d. Pelo Largo)", "value": 1}, {"name": "Rocky Highlands Special C.Dior", "value": 1}, {"name": "Nocciola (Kascha von der Fehli", "value": 1}, {"name": "MAX JIM DE LA CASA DE PAN DE J", "value": 1}, {"name": "Tino (Valentino v. Rottachtal)", "value": 1}, {"name": "Paula (Junona vom Barenreisch)", "value": 1}, {"name": "Kasimir (Karo Of Black Devils)", "value": 1}, {"name": "Venga Nel Mio Cuore von Seiden", "value": 1}, {"name": "Just Girly Things v. Shinbashi", "value": 1}, {"name": "Kayla (Orca-Kira v. Breitland)", "value": 1}, {"name": "A great Dream Kajsa of Moss-La", "value": 1}, {"name": "Cianluca-Carlos vom Rieskrater", "value": 1}, {"name": "Stars of Heaven ZZ-Midnight Sp", "value": 1}, {"name": "Habibi Star from the cute Gobl", "value": 1}, {"name": "Richo - Samarcanda Mystic Love", "value": 1}]
+                        },
+                        {
+                            "name" : "Short but unique Dogs",
+                            "children" :[{"name": "Moisha", "value": 1}, {"name": "Hilma", "value": 1}, {"name": "Bigui", "value": 1}, {"name": "Nija", "value": 1}, {"name": "Mo Blue", "value": 1}, {"name": "Tassilo", "value": 1}, {"name": "Blue Coco", "value": 1}, {"name": "Alfi", "value": 1}, {"name": "Ditta", "value": 1}, {"name": "Lasca", "value": 1}, {"name": "Dorte", "value": 1}, {"name": "Pequeno", "value": 1},{"name": "Christy", "value": 1}, {"name": "Thiago", "value": 1}, {"name": "Mate", "value": 1}, {"name": "Lava", "value": 1}, {"name": "Coco Mausi", "value": 1}, {"name": "Scubi", "value": 1}, {"name": "Biby", "value": 1}, {"name": "Kazuki", "value": 1}, {"name": "Plet", "value": 1}, {"name": "Santi", "value": 1}, {"name": "Menta", "value": 1}, {"name": "Lizzie", "value": 1}, {"name": "Aja", "value": 1}, {"name": "Reece", "value": 1}, {"name": "Herby", "value": 1}, {"name": "Sir Kenzo", "value": 1}, {"name": "Sonia", "value": 1}, {"name": "Major", "value": 1}, {"name": "Tucki", "value": 1}, {"name": "Bozo", "value": 1}]
+                        }
+
+                    ]     
+                }        
+            ]
+        } 
