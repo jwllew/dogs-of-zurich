@@ -27,8 +27,7 @@ The first visualisation is an interactive sunburst plot, created with Plotly and
 The second visualisation is a d3 bubble plot displaying various categories of dog names and their frequencies.
 It loads the d3 library from a script linked in the HTML head, and displays data from a JSON file contained within the /static directory. 
 
-image
-
+![](https://github.com/jwllew/dogs-of-zurich/blob/main/vis2.gif)
 
 
 ### Usage
