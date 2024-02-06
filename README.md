@@ -35,6 +35,7 @@ image
 The two visualisations are stored within separate folders.
 
 #### Running vis 1
+optionally run this in a virtual environment to sandbox the requirements
 ```
 cd ./vis1
 pip install -r requirements.txt
