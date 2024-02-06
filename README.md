@@ -21,7 +21,8 @@ Inspiration taken from work by [Thomas Massie](https://public.tableau.com/app/pr
 ---
 The first visualisation is an interactive sunburst plot, created with Plotly and deployed within Dash. A user can adjust the range of displayed data and navigate through the hierarchy. Tooltips display further information.
 
-image
+![](https://github.com/jwllew/dogs-of-zurich/blob/main/vis1.gif)
+
 
 The second visualisation is a d3 bubble plot displaying various categories of dog names and their frequencies.
 It loads the d3 library from a script linked in the HTML head, and displays data from a JSON file contained within the /static directory. 
